@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Player
+{
+    public class Controllers : IController, IExecutable, ICleanable, IInitializable
+    {
+
+        private List<IExecutable> _executables = new List<IExecutable>();
+        private List<ICleanable> _cleanables = new List<ICleanable>();
+        private List<IInitializable> _initializables = new List<IInitializable>();
+
+        public Controllers Add(IController controller)
+        {
+            if (controller is IExecutable executable)
+            {
+                _executables.Add(executable);
+            }
+            if (controller is ICleanable cleanable)
+            {
+                _cleanables.Add(cleanable);
+            }
+            if (controller is IInitializable initializable)
+            {
+                _initializables.Add(initializable);
+            }
+            return this;
+        }
+        public void Clean()
+        {
+            for (int i = 0; i < _cleanables.Count; ++i)
+            {
+                _cleanables[i].Clean();
+            }
+        }
+
+        public void Execute(float deltaTime)
+        {
+            for (int i = 0; i < _executables.Count; ++i)
+            {
+                _executables[i].Execute(deltaTime);
+            }
+        }
+
+        public void Initialize()
+        {
+            for (int i = 0; i < _initializables.Count; ++i)
+            {
+                _initializables[i].Initialize();
+            }
+        }
+    }
+}
