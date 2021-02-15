@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   PlayerStruct:
-    Speed: 2
+    Speed: 5
   PlayerSpawnPosition: {x: 0, y: 0, z: 0}
   PlayerObject: {fileID: 8042274719611839223, guid: 9a262101b30b360459b60fab44b5199e,
     type: 3}
