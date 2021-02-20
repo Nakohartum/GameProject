@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Moral;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace Player
     class Data : ScriptableObject
     {
         public PlayerData PlayerData;
+        public MoralData MoralData;
     }
 }

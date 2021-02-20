@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerStruct:
     Speed: 1
+    HungerData: {fileID: 11400000, guid: 81e5e2c12ff2fb046b35464ff1e043f2, type: 2}
+    MoralData: {fileID: 11400000, guid: c8834f1ee5aa7dd43884fde6bdd39392, type: 2}
   PlayerSpawnPosition: {x: 0, y: 5, z: 0}
   PlayerObject: {fileID: 1593970558521553032, guid: 46532d2387543774186b19072caa6cb0,
     type: 3}

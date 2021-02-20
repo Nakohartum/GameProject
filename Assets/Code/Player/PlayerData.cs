@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using Hunger;
+using Moral;
 
 namespace Player
 {
@@ -11,6 +13,7 @@ namespace Player
     public class PlayerData : ScriptableObject
     {
         public PlayerStruct PlayerStruct;
+        
         public Vector3 PlayerSpawnPosition;
         public GameObject PlayerObject;
     }

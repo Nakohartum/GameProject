@@ -54,7 +54,7 @@ namespace Player
 
             _rigidbody.AddForce(new Vector3(0, _jump, 0), ForceMode.Impulse);
             _rigidbody.velocity = new Vector3(_horizontal * _model.PlayerStruct.Speed, _rigidbody.velocity.y, _vertical * _model.PlayerStruct.Speed);
-            
+            Debug.Log(_model.MoralStruct.MoralAmount);
         }
     }
 }
