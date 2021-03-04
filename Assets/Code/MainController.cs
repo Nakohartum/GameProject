@@ -1,24 +1,27 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
+using WorldData;
 
-namespace Player
+namespace MainGamePart
 {
     public class MainController : MonoBehaviour
     {
-        [SerializeField]private Data GameData;
+        [SerializeField] private Data _data;
         private Controllers _controllers;
-        // Start is called before the first frame update
-        void Start()
+
+        private void Start()
         {
             _controllers = new Controllers();
-            new GameInitializer(GameData, _controllers);
+            new GameInitializer(_controllers, _data);
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            float deltaTime = Time.deltaTime;
+            var deltaTime = Time.deltaTime;
             _controllers.Execute(deltaTime);
         }
     }
