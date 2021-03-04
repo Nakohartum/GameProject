@@ -43,8 +43,11 @@ namespace Player
 
         public void Execute(float deltaTime)
         {
-            _rigidbody.velocity = new Vector3(_horizontalValue, 0, _verticalValue) * playerModel.PlayerStruct.Speed;
+            Vector3 desiredVector = Vector3.RotateTowards(playerView.transform.forward, _rigidbody.velocity, 5.0f * deltaTime, 0f);
             
+            _rigidbody.velocity = new Vector3(_horizontalValue, 0, _verticalValue) * playerModel.PlayerStruct.Speed;
+            playerView.gameObject.transform.rotation = Quaternion.LookRotation(desiredVector);
+
         }
 
         public void Initialize()

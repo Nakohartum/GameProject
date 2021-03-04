@@ -18,10 +18,9 @@ public class CameraController : IExecutable, ICleanable, IInitializable
         this.cameraView = cameraView;
         this.playerView = playerView;
         _camera = cameraView.gameObject.GetOrAddComponent<Camera>();
-        _camera.transform.parent = this.playerView.transform;
+       
         
-        _camera.transform.position += this.playerView.transform.position + cameraModel.CameraStruct.Offset;
-        _camera.transform.LookAt(this.playerView.transform);
+        
     }
 
     public void Clean()
@@ -31,7 +30,8 @@ public class CameraController : IExecutable, ICleanable, IInitializable
 
     public void Execute(float deltaTime)
     {
-        
+        _camera.transform.position = this.playerView.transform.position + cameraModel.CameraStruct.Offset;
+        _camera.transform.LookAt(this.playerView.transform);
     }
 
     public void Initialize()
