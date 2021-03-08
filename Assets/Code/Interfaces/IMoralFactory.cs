@@ -1,6 +1,7 @@
 ﻿using Moral;
 using Player;
 
+
 namespace Interfaces
 {
     public interface IMoralFactory : IController

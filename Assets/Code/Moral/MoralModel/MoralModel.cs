@@ -1,20 +1,23 @@
 ﻿using Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Moral
 {
     public class MoralModel 
     {
+        #region Fields
+
         public IMoral MoralStruct;
+
+        #endregion
+
+        #region Constructor
 
         public MoralModel(IMoral moralStruct)
         {
             MoralStruct = moralStruct;
         }
+
+        #endregion
     }
 }

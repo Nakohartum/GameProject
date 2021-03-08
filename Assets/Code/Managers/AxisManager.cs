@@ -7,8 +7,12 @@ namespace Managers
 {
     public class AxisManager
     {
+        #region Fields
+
         public const string VERTICAL = "Vertical";
         public const string HORIZONTAL = "Horizontal";
+
+        #endregion
     }
 }
 

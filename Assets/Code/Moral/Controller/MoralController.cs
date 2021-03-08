@@ -1,18 +1,20 @@
 ﻿using Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+
 
 namespace Moral
 {
     public class MoralController : IExecutable, ICleanable, IInitializable
     {
+        #region Fields
+
         private MoralModel moralModel;
         private MoralView moralView;
         private IMoralProvider moralProvider;
+
+        #endregion
+
+        #region Constructor
+
         public MoralController(MoralModel moralModel, MoralView moralView, IMoralProvider moralProvider)
         {
             this.moralModel = moralModel;
@@ -20,6 +22,10 @@ namespace Moral
             this.moralProvider = moralProvider;
             this.moralProvider.GetDamage += GetDamage;
         }
+
+        #endregion
+
+        #region Methods
 
         private float GetDamage()
         {
@@ -39,10 +45,6 @@ namespace Moral
             return damage;
         }
 
-        private MoralStatus onMoralStatusChange()
-        {
-            return moralModel.MoralStruct.MoralStatus;
-        }
 
         public void Clean()
         {
@@ -51,7 +53,7 @@ namespace Moral
 
         public void Execute(float deltaTime)
         {
-            moralModel.MoralStruct.MoralAmount -= 20;
+            
             MoralStatusCheck();
             GetDamage();
         }
@@ -76,11 +78,11 @@ namespace Moral
             
         }
 
-        
-
         public void Initialize()
         {
             
         }
+
+        #endregion
     }
 }

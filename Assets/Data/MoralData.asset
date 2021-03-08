@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MoralData
   m_EditorClassIdentifier: 
   MoralStruct:
-    MoralAmount: 50
+    MoralAmount: 100
     MoralStatus: 2
-    MoralDamage: 10
+    MoralDamage: 5

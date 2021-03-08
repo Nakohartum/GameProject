@@ -1,13 +1,20 @@
 ﻿using Interfaces;
 using System.Collections.Generic;
 
+
 namespace MainGamePart
 {
     public class Controllers : IExecutable, ICleanable, IInitializable
     {
+        #region Fields
+
         private List<IExecutable> _executables = new List<IExecutable>();
         private List<ICleanable> _cleanables = new List<ICleanable>();
         private List<IInitializable> _initializables = new List<IInitializable>();
+
+        #endregion
+
+        #region Methods
 
         public Controllers AddController(IController controller)
         {
@@ -48,5 +55,7 @@ namespace MainGamePart
                 _initializables[i].Initialize();
             }
         }
+
+        #endregion
     }
 }

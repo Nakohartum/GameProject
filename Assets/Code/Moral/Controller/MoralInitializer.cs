@@ -6,10 +6,17 @@ namespace Moral
 {
     public class MoralInitializer : IInitializable
     {
+        #region Fields
+
         private IMoralFactory _moralFactory;
         private IController _moralController;
         private MoralView _moralView;
         private IMoralProvider moralProvider;
+
+        #endregion
+
+        #region Constructor
+
         public MoralInitializer(IMoralFactory moralFactory, PlayerView playerView, IMoralProvider moralProvider)
         {
             _moralFactory = moralFactory;
@@ -17,6 +24,10 @@ namespace Moral
             _moralController = _moralFactory.Create(playerView);
             _moralView = _moralFactory.GetMoralView();
         }
+
+        #endregion
+
+        #region Methods
 
         public IController GetController()
         {
@@ -32,5 +43,7 @@ namespace Moral
         {
             
         }
+
+        #endregion
     }
 }

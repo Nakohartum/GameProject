@@ -5,10 +5,13 @@ using CameraSpace;
 using Moral;
 using Providers;
 
+
 namespace MainGamePart
 {
     class GameInitializer
     {
+        #region Constructor
+
         public GameInitializer(Controllers controllers, Data data)
         {
             var moralProvider = new MoralProvider();
@@ -34,5 +37,7 @@ namespace MainGamePart
             controllers.AddController(playerController);
             controllers.AddController(playerInitializer);
         }
+
+        #endregion
     }
 }

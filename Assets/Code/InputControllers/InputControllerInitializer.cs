@@ -1,22 +1,28 @@
 ﻿using Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace InputControllers
 {
     class InputControllerInitializer : IInitializable
     {
+        #region Fields
+
         private IInputProvider _verticalInput;
         private IInputProvider _horizontalInput;
+
+        #endregion
+
+        #region Constructor
 
         public InputControllerInitializer()
         {
             _verticalInput = new VerticalInputController();
             _horizontalInput = new HorizontalInputController();
         }
+
+        #endregion
+
+        #region Methods
 
         public (IInputProvider horizontal, IInputProvider vertical) GetInput()
         {
@@ -26,7 +32,9 @@ namespace InputControllers
 
         public void Initialize()
         {
-            
+
         }
+
+        #endregion
     }
 }

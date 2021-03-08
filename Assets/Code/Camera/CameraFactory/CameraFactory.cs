@@ -9,14 +9,25 @@ namespace CameraSpace
 {
     public class CameraFactory : ICameraFactory
     {
+        #region Fields
+
         private CameraData _cameraData;
         private PlayerView _playerView;
+
+        #endregion
+
+        #region Constructor
 
         public CameraFactory(CameraData cameraData, PlayerView playerView)
         {
             _cameraData = cameraData;
             _playerView = playerView;
         }
+
+        #endregion
+
+        #region Methods
+
         public CameraController CreateCamera()
         {
             var cameraModel = new CameraModel(_cameraData.CameraStruct);
@@ -24,5 +35,7 @@ namespace CameraSpace
             var controller = new CameraController(cameraModel, cameraView, _playerView);
             return controller;
         }
+
+        #endregion
     }
 }

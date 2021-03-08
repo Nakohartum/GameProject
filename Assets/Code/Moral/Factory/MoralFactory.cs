@@ -1,10 +1,5 @@
 ﻿using Interfaces;
 using Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using WorldData;
 using Extensions;
@@ -14,15 +9,25 @@ namespace Moral
 {
     public class MoralFactory : IMoralFactory
     {
+        #region Fields
+
         private MoralData _moralData;
         private MoralView _moralView;
         private IMoralProvider moralProvider;
+
+        #endregion
+
+        #region Constructor
+
         public MoralFactory(MoralData moralData, IMoralProvider moralProvider)
         {
             _moralData = moralData;
             this.moralProvider = moralProvider;
         }
 
+        #endregion
+
+        #region Methods
 
         public IController Create(PlayerView playerView)
         {
@@ -37,5 +42,7 @@ namespace Moral
         {
             return _moralView;
         }
+
+        #endregion
     }
 }
