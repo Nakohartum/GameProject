@@ -7,6 +7,8 @@ namespace Player
 {
     class PlayerController : IExecutable, ICleanable, IInitializable
     {
+        #region Fields
+
         private PlayerModel playerModel;
         private PlayerView playerView;
         private float _horizontalValue;
@@ -14,16 +16,26 @@ namespace Player
         private IInputProvider _horizontalInputProider;
         private IInputProvider _verticalInputProvider;
         private Rigidbody _rigidbody;
+        private IMoralProvider moralProvider;
 
-        public PlayerController(PlayerModel playerModel, PlayerView playerView, (IInputProvider horizontal, IInputProvider vertical) input)
+        #endregion
+
+        public PlayerController(PlayerModel playerModel, PlayerView playerView, (IInputProvider horizontal, IInputProvider vertical) input, IMoralProvider moralProvider)
         {
             this.playerModel = playerModel;
             this.playerView = playerView;
+            this.moralProvider = moralProvider;
+            this.moralProvider.onPlayerHPChange += ChangePlayerHp;
             _horizontalInputProider = input.horizontal;
             _verticalInputProvider = input.vertical;
             _horizontalInputProider.OnAxisChange += OnHorizontalAxisChange;
             _verticalInputProvider.OnAxisChange += OnVerticalAxisChange;
             _rigidbody = this.playerView.gameObject.GetOrAddComponent<Rigidbody>();
+        }
+
+        private void ChangePlayerHp(float damage)
+        {
+            playerModel.PlayerStruct.HP -= damage;
         }
 
         private void OnVerticalAxisChange(float value)
@@ -47,8 +59,10 @@ namespace Player
             
             _rigidbody.velocity = new Vector3(_horizontalValue, 0, _verticalValue) * playerModel.PlayerStruct.Speed;
             playerView.gameObject.transform.rotation = Quaternion.LookRotation(desiredVector);
-
+            Debug.LogWarning(playerModel.PlayerStruct.HP);
         }
+
+        
 
         public void Initialize()
         {

@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Interfaces;
+using Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace WorldData
         public PlayerStruct PlayerStruct;
         public GameObject Player;
         public Vector3 SpawnPosition;
+
     }
 }

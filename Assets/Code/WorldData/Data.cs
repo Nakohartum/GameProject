@@ -10,6 +10,7 @@ namespace WorldData
     [CreateAssetMenu(fileName = "WorldData", menuName = "GameData/WorldData", order = 0)]
     public class Data : ScriptableObject
     {
+        public MoralData MoralData;
         public CameraData CameraData;
         public PlayerData PlayerData;
     }

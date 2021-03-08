@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   PlayerStruct:
-    HP: 4
+    HP: 50
     Speed: 4
   Player: {fileID: 8042274719611839223, guid: 9a262101b30b360459b60fab44b5199e, type: 3}
   SpawnPosition: {x: 3.4, y: 1.3, z: -2.3}

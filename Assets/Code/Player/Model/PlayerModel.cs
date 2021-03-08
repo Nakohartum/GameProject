@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace Player
 {
-    class PlayerModel
+    public class PlayerModel
     {
-        public PlayerStruct PlayerStruct;
-        public PlayerModel(PlayerStruct playerStruct)
+        public IPlayer PlayerStruct;
+        public PlayerModel(IPlayer playerStruct)
         {
             PlayerStruct = playerStruct;
         }
+
+        
     }
 }
