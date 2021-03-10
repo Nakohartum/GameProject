@@ -37,6 +37,14 @@ public class CameraController : IExecutable, ICleanable, IInitializable
 
     public void Execute(float deltaTime)
     {
+        RaycastHit hit;
+        Ray ray = new Ray(cameraView.transform.position, playerView.transform.position);
+        Physics.Raycast(cameraView.transform.position, playerView.transform.position, out hit, (cameraView.transform.position - playerView.transform.position).magnitude);
+        if (hit.collider != null)
+        {
+            hit.collider.gameObject.GetComponent<MeshRenderer>().material.color.a = 0.5f;
+        }
+        Debug.DrawRay(cameraView.transform.position, playerView.transform.position, Color.red);
         _camera.transform.position = this.playerView.transform.position + cameraModel.CameraStruct.Offset;
         _camera.transform.LookAt(this.playerView.transform);
     }
