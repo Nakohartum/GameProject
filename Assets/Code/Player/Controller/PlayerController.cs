@@ -9,14 +9,15 @@ namespace Player
     {
         #region Fields
 
-        private PlayerModel playerModel;
-        private PlayerView playerView;
+        private PlayerModel _playerModel;
+        private PlayerView _playerView;
         private float _horizontalValue;
         private float _verticalValue;
         private IInputProvider _horizontalInputProider;
         private IInputProvider _verticalInputProvider;
         private Rigidbody _rigidbody;
         private IMoralProvider moralProvider;
+        private Vector3 _moveDirection;
 
         #endregion
 
@@ -24,15 +25,17 @@ namespace Player
 
         public PlayerController(PlayerModel playerModel, PlayerView playerView, (IInputProvider horizontal, IInputProvider vertical) input, IMoralProvider moralProvider)
         {
-            this.playerModel = playerModel;
-            this.playerView = playerView;
+            this._playerModel = playerModel;
+            this._playerView = playerView;
             this.moralProvider = moralProvider;
             this.moralProvider.onPlayerHPChange += ChangePlayerHp;
             _horizontalInputProider = input.horizontal;
             _verticalInputProvider = input.vertical;
             _horizontalInputProider.OnAxisChange += OnHorizontalAxisChange;
             _verticalInputProvider.OnAxisChange += OnVerticalAxisChange;
-            _rigidbody = this.playerView.gameObject.GetOrAddComponent<Rigidbody>();
+            _rigidbody = this._playerView.gameObject.GetOrAddComponent<Rigidbody>();
+            _rigidbody.freezeRotation = true;
+            
         }
 
         #endregion
@@ -41,7 +44,7 @@ namespace Player
 
         private void ChangePlayerHp(float damage)
         {
-            playerModel.PlayerStruct.HP -= damage;
+            _playerModel.PlayerStruct.HP -= damage;
         }
 
         private void OnVerticalAxisChange(float value)
@@ -69,16 +72,22 @@ namespace Player
 
         private void Move(float deltaTime)
         {
-            Vector3 desiredVector = Vector3.RotateTowards(playerView.transform.forward, _rigidbody.velocity, 5.0f * deltaTime, 0f);
+            _moveDirection = new Vector3(_horizontalValue, 0, _verticalValue).normalized * _playerModel.PlayerStruct.Speed;
+            _rigidbody.velocity = new Vector3(_moveDirection.x, _rigidbody.velocity.y, _moveDirection.z);
+            _playerView.transform.Rotate(Vector3.up, Extensions.Extensions.Angle360(_playerView.transform.forward, _moveDirection, _playerView.transform.right));
+        }
 
-            _rigidbody.velocity = new Vector3(_horizontalValue, 0, _verticalValue) * playerModel.PlayerStruct.Speed;
-            playerView.gameObject.transform.rotation = Quaternion.LookRotation(desiredVector);
-
+        private float MoverCheck()
+        {
+            if (_moveDirection.x != 0 || _moveDirection.z != 0)
+                return 1f;
+            else
+                return 0f;
         }
 
         private void CheckHealth()
         {
-            if (playerModel.PlayerStruct.HP < 0)
+            if (_playerModel.PlayerStruct.HP < 0)
             {
                 Die();
             }
@@ -86,7 +95,7 @@ namespace Player
 
         private void Die() 
         {
-            playerView.gameObject.SetActive(false);
+            _playerView.gameObject.SetActive(false);
         }
 
         public void Initialize()
