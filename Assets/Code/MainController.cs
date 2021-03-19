@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using WorldData;
 
 
@@ -17,14 +18,27 @@ namespace MainGamePart
 
         private void Start()
         {
+            
             _controllers = new Controllers();
             new GameInitializer(_controllers, _data);
         }
 
         private void Update()
         {
+            
             var deltaTime = Time.deltaTime;
             _controllers.Execute(deltaTime);
+        }
+
+        public IEnumerator Work(float time)
+        {
+
+            while (time > 0)
+            {
+                yield return new WaitForSeconds(1.0f);
+                Debug.LogError(time);
+                time -= 1;
+            }
         }
 
         #endregion

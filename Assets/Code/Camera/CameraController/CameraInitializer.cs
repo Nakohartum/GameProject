@@ -14,10 +14,10 @@ namespace CameraSpace
 
         #region Constructor
 
-        public CameraInitializer(ICameraFactory cameraFactory)
+        public CameraInitializer(ICameraFactory cameraFactory, ICameraProvider cameraProvider)
         {
             _cameraFactory = cameraFactory;
-            _controller = _cameraFactory.CreateCamera();
+            _controller = _cameraFactory.CreateCamera(cameraProvider);
         }
 
         #endregion

@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\Builder\GameObjectBuilder.cs" />
     <Compile Include="Assets\Code\Camera\CameraController\CameraController.cs" />
     <Compile Include="Assets\Code\Camera\CameraController\CameraInitializer.cs" />
     <Compile Include="Assets\Code\Camera\CameraFactory\CameraFactory.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Code\InputControllers\InputControllerInitializer.cs" />
     <Compile Include="Assets\Code\InputControllers\VerticalInputController.cs" />
     <Compile Include="Assets\Code\Interfaces\ICameraFactory.cs" />
+    <Compile Include="Assets\Code\Interfaces\ICameraProvider.cs" />
     <Compile Include="Assets\Code\Interfaces\ICleanable.cs" />
     <Compile Include="Assets\Code\Interfaces\IController.cs" />
     <Compile Include="Assets\Code\Interfaces\IExecutable.cs" />
@@ -89,8 +91,11 @@
     <Compile Include="Assets\Code\Interfaces\IPlayer.cs" />
     <Compile Include="Assets\Code\Interfaces\IPlayerFactory.cs" />
     <Compile Include="Assets\Code\Interfaces\IPlayerProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\ITimer.cs" />
     <Compile Include="Assets\Code\MainController.cs" />
     <Compile Include="Assets\Code\Managers\AxisManager.cs" />
+    <Compile Include="Assets\Code\Managers\PathManager.cs" />
+    <Compile Include="Assets\Code\Managers\RoomManager.cs" />
     <Compile Include="Assets\Code\Moral\Controller\MoralController.cs" />
     <Compile Include="Assets\Code\Moral\Controller\MoralInitializer.cs" />
     <Compile Include="Assets\Code\Moral\Factory\MoralFactory.cs" />
@@ -104,7 +109,19 @@
     <Compile Include="Assets\Code\Player\Model\PlayerModel.cs" />
     <Compile Include="Assets\Code\Player\Model\PlayerStruct.cs" />
     <Compile Include="Assets\Code\Player\Model\PlayerView.cs" />
+    <Compile Include="Assets\Code\Providers\CameraProvider.cs" />
     <Compile Include="Assets\Code\Providers\MoralProvider.cs" />
+    <Compile Include="Assets\Code\Providers\RoomProvider.cs" />
+    <Compile Include="Assets\Code\SceneWorker\RoomController.cs" />
+    <Compile Include="Assets\Code\SceneWorker\RoomInitializer.cs" />
+    <Compile Include="Assets\Code\SceneWorker\SceneInitializer.cs" />
+    <Compile Include="Assets\Code\SceneWorker\SceneManager.cs" />
+    <Compile Include="Assets\Code\SceneWorker\SceneWorkerInitializer.cs" />
+    <Compile Include="Assets\Code\Timers\AsyncOperationBehaviour.cs" />
+    <Compile Include="Assets\Code\Timers\CouroutineState.cs" />
+    <Compile Include="Assets\Code\Timers\Timer.cs" />
+    <Compile Include="Assets\Code\Timers\TimerController.cs" />
+    <Compile Include="Assets\Code\Timers\TimerExtensions.cs" />
     <Compile Include="Assets\Code\WorldData\CameraData.cs" />
     <Compile Include="Assets\Code\WorldData\Data.cs" />
     <Compile Include="Assets\Code\WorldData\MoralData.cs" />

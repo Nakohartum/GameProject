@@ -28,11 +28,14 @@ namespace CameraSpace
 
         #region Methods
 
-        public CameraController CreateCamera()
+        public CameraController CreateCamera(ICameraProvider cameraProvider)
         {
             var cameraModel = new CameraModel(_cameraData.CameraStruct);
+            var cameraUI = GameObject.FindGameObjectWithTag("UI");
+
             var cameraView = Object.Instantiate(_cameraData.Camera, Vector3.zero, Quaternion.identity).GetOrAddComponent<CameraView>();
-            var controller = new CameraController(cameraModel, cameraView, _playerView);
+
+            var controller = new CameraController(cameraModel, cameraView, _playerView, cameraProvider);
             return controller;
         }
 

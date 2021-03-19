@@ -2,6 +2,7 @@
 using UnityEngine;
 using WorldData;
 using Extensions;
+using Providers;
 
 
 namespace Player
@@ -12,16 +13,18 @@ namespace Player
 
         private PlayerData _playerData;
         private PlayerView _playerView;
-        private IMoralProvider moralProvider;
+        private IMoralProvider _moralProvider;
+        private RoomProvider _roomProvider;
 
         #endregion
 
         #region Constructor
 
-        public PlayerFactory(PlayerData playerData, IMoralProvider moralProvider)
+        public PlayerFactory(PlayerData playerData, IMoralProvider moralProvider, RoomProvider roomProvider)
         {
             _playerData = playerData;
-            this.moralProvider = moralProvider;
+            this._moralProvider = moralProvider;
+            this._roomProvider = roomProvider;
         }
 
         #endregion
@@ -30,9 +33,10 @@ namespace Player
 
         public IController Create((IInputProvider horizontal, IInputProvider vertical) input)
         {
+            var spawnPosition = GameObject.FindGameObjectWithTag("Spawn");
             var playerModel = new PlayerModel(_playerData.PlayerStruct);
-            _playerView = Object.Instantiate(_playerData.Player, _playerData.SpawnPosition, Quaternion.identity).GetOrAddComponent<PlayerView>();
-            PlayerController playerController = new PlayerController(playerModel, _playerView, input, this.moralProvider);
+            _playerView = Object.Instantiate(_playerData.Player, spawnPosition.transform.position, Quaternion.identity).GetOrAddComponent<PlayerView>();
+            PlayerController playerController = new PlayerController(playerModel, _playerView, input, this._moralProvider, _roomProvider);
             return playerController;
         }
 

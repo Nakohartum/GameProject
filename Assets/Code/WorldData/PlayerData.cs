@@ -11,7 +11,6 @@ namespace WorldData
 
         public PlayerStruct PlayerStruct;
         public GameObject Player;
-        public Vector3 SpawnPosition;
 
         #endregion
     }

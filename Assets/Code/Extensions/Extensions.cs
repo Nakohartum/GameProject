@@ -17,11 +17,13 @@ namespace Extensions
             return component;
         }
 
-        public static void ChangeAlpha(this Material material, float alphaValue)
+        public static Material ChangeAlpha(this Material material, float alphaValue)
         {
+            var mat = material;
             var oldColor = material.color;
             var newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaValue);
-            material.SetColor("New color", newColor);
+            mat.SetColor("New color", newColor);
+            return mat;
         }
 
         public static float Angle360(Vector3 from, Vector3 to, Vector3 right)

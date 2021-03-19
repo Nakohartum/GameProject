@@ -13,17 +13,25 @@ public class CameraController : IExecutable, ICleanable, IInitializable
     private CameraView cameraView;
     private PlayerView playerView;
     private Camera _camera;
+    private ICameraProvider _cameraProvider;
 
     #endregion
 
     #region Constructor
 
-    public CameraController(CameraModel cameraModel, CameraView cameraView, PlayerView playerView)
+    public CameraController(CameraModel cameraModel, CameraView cameraView, PlayerView playerView, ICameraProvider cameraProvider)
     {
         this.cameraModel = cameraModel;
         this.cameraView = cameraView;
         this.playerView = playerView;
         _camera = cameraView.gameObject.GetOrAddComponent<Camera>();
+        _cameraProvider = cameraProvider;
+        _cameraProvider.OnPlayerTeleport += CameraBackgroundChange;
+    }
+
+    private void CameraBackgroundChange()
+    {
+        
     }
 
     #endregion
