@@ -36,7 +36,7 @@ namespace Player
             var spawnPosition = GameObject.FindGameObjectWithTag("Spawn");
             var playerModel = new PlayerModel(_playerData.PlayerStruct);
             _playerView = Object.Instantiate(_playerData.Player, spawnPosition.transform.position, Quaternion.identity).GetOrAddComponent<PlayerView>();
-            PlayerController playerController = new PlayerController(playerModel, _playerView, input, this._moralProvider, _roomProvider);
+            PlayerController playerController = new PlayerController(playerModel, _playerView, input, this._moralProvider);
             return playerController;
         }
 

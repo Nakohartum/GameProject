@@ -20,14 +20,14 @@ namespace Player
         private Rigidbody _rigidbody;
         private IMoralProvider _moralProvider;
         private Vector3 _moveDirection;
-        private RoomProvider _roomProvider;
-        private string _roomName = string.Empty;
+        private Animator _animator;
+        private AudioSource _audioSource;
 
         #endregion
 
         #region Constructor
 
-        public PlayerController(PlayerModel playerModel, PlayerView playerView, (IInputProvider horizontal, IInputProvider vertical) input, IMoralProvider moralProvider, RoomProvider roomProvider)
+        public PlayerController(PlayerModel playerModel, PlayerView playerView, (IInputProvider horizontal, IInputProvider vertical) input, IMoralProvider moralProvider)
         {
             this._playerModel = playerModel;
             this._playerView = playerView;
@@ -40,30 +40,14 @@ namespace Player
             _rigidbody = this._playerView.gameObject.GetOrAddComponent<Rigidbody>();
             _rigidbody.freezeRotation = true;
             _playerView.OnRoomEnter += RoomEnter;
-            _roomProvider = roomProvider;
-            _roomProvider.OnRoomEnter += GetEnteredRoom;
+            _animator = _playerView.gameObject.GetComponent<Animator>();
+            _audioSource = _playerView.GetComponent<AudioSource>();
         }
 
-        private string GetEnteredRoom()
-        {
-            return _roomName;
-        }
 
         private void RoomEnter(string nameRoom)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (nameRoom.Equals(RoomManager.ROOM_ONE))
-                {
-                    _playerView.transform.position = RoomManager.roomNumbers[1].position;
-                    _roomName = RoomManager.ROOM_ONE_BUILDING;
-                }
-                if (nameRoom.Equals(RoomManager.ROOM_TWO))
-                {
-                    _playerView.transform.position = RoomManager.roomNumbers[2].position;
-                    _roomName = RoomManager.ROOM_TWO_BUILDING;
-                }
-            }
+            return;
         }
 
         #endregion
@@ -100,9 +84,24 @@ namespace Player
 
         private void Move(float deltaTime)
         {
+            
             _moveDirection = new Vector3(_horizontalValue, 0, _verticalValue).normalized * _playerModel.PlayerStruct.Speed;
             _rigidbody.velocity = new Vector3(_moveDirection.x, _rigidbody.velocity.y, _moveDirection.z);
-            _playerView.transform.Rotate(Vector3.up, Extensions.Extensions.Angle360(_playerView.transform.forward, _moveDirection, _playerView.transform.right) * deltaTime);
+            if (_moveDirection.sqrMagnitude > 0)
+            {
+                _animator.SetBool("isWalking", true);
+            }
+            else
+            {
+                _animator.SetBool("isWalking", false);
+            }
+            if (_moveDirection.sqrMagnitude > 0)
+            {
+                Quaternion newRotation = Quaternion.LookRotation(_moveDirection);
+                _playerView.transform.rotation = Quaternion.Slerp(_playerView.transform.rotation, newRotation, Time.deltaTime * _playerModel.PlayerStruct.TurningSpeed);
+            }
+            
+
         }
 
         private void CheckHealth()

@@ -15,8 +15,17 @@ namespace Managers
 
         public static void GetRoomsPosition()
         {
+
             var room = GameObject.FindGameObjectWithTag("RoomEntrance");
+            if (room == null)
+            {
+                return;
+            }
             var rooms = room.GetComponentsInChildren<Transform>();
+            if (rooms.Length == 0)
+            {
+                return;
+            }
             for (int i = 1; i < rooms.Length; i++)
             {
                 roomNumbers[i] = rooms[i];

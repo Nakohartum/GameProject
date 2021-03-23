@@ -13,9 +13,7 @@ namespace Providers
 
         private void GetRoomName()
         {
-            roomName = OnRoomEnter.Invoke();
-            
-            Debug.Log(roomName);
+            roomName = OnRoomEnter.Invoke();    
         }
 
         private void EnableRoom()

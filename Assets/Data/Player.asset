@@ -15,5 +15,5 @@ MonoBehaviour:
   PlayerStruct:
     HP: 50
     Speed: 4
-  Player: {fileID: 753653903095162611, guid: 115fcb93be56a19468358de5a47e7d7e, type: 3}
-  SpawnPosition: {x: 1.7, y: 2.6, z: -8}
+    TurningSpeed: 5
+  Player: {fileID: 724161569196285105, guid: 9342e78f4850070488bb798f3bbf8840, type: 3}

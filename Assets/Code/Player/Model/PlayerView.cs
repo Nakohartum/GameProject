@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Player
 {
     [RequireComponent(typeof(CapsuleCollider))]
+    [RequireComponent(typeof(Animator))]
     public class PlayerView : MonoBehaviour
     {
         public event Action<string> OnRoomEnter;
