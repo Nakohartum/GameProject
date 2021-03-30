@@ -30,16 +30,7 @@ namespace MainGamePart
             _controllers.Execute(deltaTime);
         }
 
-        public IEnumerator Work(float time)
-        {
-
-            while (time > 0)
-            {
-                yield return new WaitForSeconds(1.0f);
-                Debug.LogError(time);
-                time -= 1;
-            }
-        }
+        
 
         #endregion
     }

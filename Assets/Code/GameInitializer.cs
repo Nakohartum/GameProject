@@ -33,7 +33,6 @@ namespace MainGamePart
             var moralFactory = new MoralFactory(data.MoralData, moralProvider);
             var moralInitializer = new MoralInitializer(moralFactory, playerInitializer.GetPlayerView(), moralProvider);
             var moralController = moralInitializer.GetController();
-            var roomController = sceneWorkerInitializer.GetRoomController();
             controllers.AddController(roomProvider);
             controllers.AddController(sceneWorkerInitializer);
             controllers.AddController(moralProvider);

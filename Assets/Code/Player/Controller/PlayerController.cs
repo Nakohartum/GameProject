@@ -1,8 +1,6 @@
 ﻿using Interfaces;
 using UnityEngine;
 using Extensions;
-using Managers;
-using Providers;
 
 
 namespace Player
@@ -22,6 +20,9 @@ namespace Player
         private Vector3 _moveDirection;
         private Animator _animator;
         private AudioSource _audioSource;
+        private float _timeToStep, _currentTimeToStep;
+        private AnimationEvent _animationEvent;
+        private int isWalkingHash;
 
         #endregion
 
@@ -42,17 +43,23 @@ namespace Player
             _playerView.OnRoomEnter += RoomEnter;
             _animator = _playerView.gameObject.GetComponent<Animator>();
             _audioSource = _playerView.GetComponent<AudioSource>();
+            _audioSource.playOnAwake = false;
+            _timeToStep = 0.3f;
+            _currentTimeToStep = _timeToStep;
+            isWalkingHash = Animator.StringToHash("isWalking");
         }
 
+
+
+
+        #endregion
+
+        #region Methods
 
         private void RoomEnter(string nameRoom)
         {
             return;
         }
-
-        #endregion
-
-        #region Methods
 
         private void ChangePlayerHp(float damage)
         {
@@ -84,16 +91,21 @@ namespace Player
 
         private void Move(float deltaTime)
         {
-            
+            //if (_currentTimeToStep < 0)
+            //{
+            //    _audioSource.Play();
+            //    _currentTimeToStep = _timeToStep;
+            //}
             _moveDirection = new Vector3(_horizontalValue, 0, _verticalValue).normalized * _playerModel.PlayerStruct.Speed;
             _rigidbody.velocity = new Vector3(_moveDirection.x, _rigidbody.velocity.y, _moveDirection.z);
             if (_moveDirection.sqrMagnitude > 0)
             {
-                _animator.SetBool("isWalking", true);
+                _currentTimeToStep -= deltaTime;
+                _animator.SetBool(isWalkingHash, true);
             }
             else
             {
-                _animator.SetBool("isWalking", false);
+                _animator.SetBool(isWalkingHash, false);
             }
             if (_moveDirection.sqrMagnitude > 0)
             {
@@ -110,6 +122,11 @@ namespace Player
             {
                 Die();
             }
+        }
+
+        public void StepSoundPlay()
+        {
+            _audioSource.Play();
         }
 
         private void Die() 
