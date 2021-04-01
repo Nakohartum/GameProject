@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{76242054-243E-6FFC-C6F8-742C7283CB8C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -88,9 +89,12 @@
     <Compile Include="Assets\Code\Interfaces\IMoral.cs" />
     <Compile Include="Assets\Code\Interfaces\IMoralFactory.cs" />
     <Compile Include="Assets\Code\Interfaces\IMoralProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\INPC.cs" />
+    <Compile Include="Assets\Code\Interfaces\INPCFactory.cs" />
     <Compile Include="Assets\Code\Interfaces\IPlayer.cs" />
     <Compile Include="Assets\Code\Interfaces\IPlayerFactory.cs" />
     <Compile Include="Assets\Code\Interfaces\IPlayerProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\IQuest.cs" />
     <Compile Include="Assets\Code\Interfaces\ITimer.cs" />
     <Compile Include="Assets\Code\MainController.cs" />
     <Compile Include="Assets\Code\Managers\AxisManager.cs" />
@@ -103,6 +107,12 @@
     <Compile Include="Assets\Code\Moral\MoralModel\MoralStatus.cs" />
     <Compile Include="Assets\Code\Moral\MoralModel\MoralStruct.cs" />
     <Compile Include="Assets\Code\Moral\MoralModel\MoralView.cs" />
+    <Compile Include="Assets\Code\NPC\Controllers\NPCController.cs" />
+    <Compile Include="Assets\Code\NPC\Controllers\NPCInitializer.cs" />
+    <Compile Include="Assets\Code\NPC\Factory\NPCFactory.cs" />
+    <Compile Include="Assets\Code\NPC\Model\NPCInfo.cs" />
+    <Compile Include="Assets\Code\NPC\Model\NPCModel.cs" />
+    <Compile Include="Assets\Code\NPC\Model\NPCView.cs" />
     <Compile Include="Assets\Code\Player\Controller\PlayerController.cs" />
     <Compile Include="Assets\Code\Player\Controller\PlayerInitializer.cs" />
     <Compile Include="Assets\Code\Player\Factory\PlayerFactory.cs" />
@@ -112,6 +122,7 @@
     <Compile Include="Assets\Code\Providers\CameraProvider.cs" />
     <Compile Include="Assets\Code\Providers\MoralProvider.cs" />
     <Compile Include="Assets\Code\Providers\RoomProvider.cs" />
+    <Compile Include="Assets\Code\Quests\Quest.cs" />
     <Compile Include="Assets\Code\SceneWorker\RoomController.cs" />
     <Compile Include="Assets\Code\SceneWorker\RoomInitializer.cs" />
     <Compile Include="Assets\Code\SceneWorker\SceneInitializer.cs" />
@@ -125,6 +136,7 @@
     <Compile Include="Assets\Code\WorldData\CameraData.cs" />
     <Compile Include="Assets\Code\WorldData\Data.cs" />
     <Compile Include="Assets\Code\WorldData\MoralData.cs" />
+    <Compile Include="Assets\Code\WorldData\NPCData.cs" />
     <Compile Include="Assets\Code\WorldData\PlayerData.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Camera\vThirdPersonCamera.cs" />
@@ -710,7 +722,8 @@
       <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

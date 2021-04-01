@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerStruct:
     HP: 50
-    Speed: 4
+    Speed: 2
     TurningSpeed: 5
   Player: {fileID: 724161569196285105, guid: 9342e78f4850070488bb798f3bbf8840, type: 3}

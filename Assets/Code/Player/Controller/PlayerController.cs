@@ -34,6 +34,7 @@ namespace Player
             this._playerView = playerView;
             this._moralProvider = moralProvider;
             this._moralProvider.onPlayerHPChange += ChangePlayerHp;
+            this._playerView.OnStepPlay += StepSoundPlay;
             _horizontalInputProider = input.horizontal;
             _verticalInputProvider = input.vertical;
             _horizontalInputProider.OnAxisChange += OnHorizontalAxisChange;
@@ -97,7 +98,7 @@ namespace Player
             //    _currentTimeToStep = _timeToStep;
             //}
             _moveDirection = new Vector3(_horizontalValue, 0, _verticalValue).normalized * _playerModel.PlayerStruct.Speed;
-            _rigidbody.velocity = new Vector3(_moveDirection.x, _rigidbody.velocity.y, _moveDirection.z);
+            //_rigidbody.velocity = new Vector3(_moveDirection.x, _rigidbody.velocity.y, _moveDirection.z);
             if (_moveDirection.sqrMagnitude > 0)
             {
                 _currentTimeToStep -= deltaTime;
