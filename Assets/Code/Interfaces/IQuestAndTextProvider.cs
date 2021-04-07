@@ -10,7 +10,7 @@ namespace Interfaces
 {
     public interface IQuestAndTextProvider : IController
     {
-        event Func<GameObject> OnGameObjectGet;
+        event Action<bool> OnGameObjectGet;
         event Func<bool> OnBooleanValueGet;
     }
 }

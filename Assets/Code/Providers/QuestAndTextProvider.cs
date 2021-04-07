@@ -6,38 +6,29 @@ namespace Providers
 {
     public class QuestAndTextProvider : IQuestAndTextProvider, IExecutable
     {
-        public event Func<GameObject> OnGameObjectGet;
+        public event Action<bool> OnGameObjectGet;
         public event Func<bool> OnBooleanValueGet;
-        private bool isInTrigger;
-        private GameObject textObject;
+        private bool _isInTrigger;
 
         public QuestAndTextProvider()
         {
-
+            
         }
         
         private void GetGameObject()
         {
-            textObject = OnGameObjectGet?.Invoke();
+            OnGameObjectGet.Invoke(_isInTrigger);
         }
 
         private void GetBooleanValue()
         {
-            isInTrigger = OnBooleanValueGet.Invoke();
+            _isInTrigger = OnBooleanValueGet.Invoke();
         }
 
         public void Execute(float deltaTime)
         {
             GetGameObject();
             GetBooleanValue();
-            if (isInTrigger)
-            {
-                textObject.SetActive(true);
-            }
-            else
-            {
-                textObject.SetActive(false);
-            }
         }
     }
 }
