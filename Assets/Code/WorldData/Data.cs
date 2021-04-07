@@ -11,7 +11,8 @@ namespace WorldData
         public MoralData MoralData;
         public CameraData CameraData;
         public PlayerData PlayerData;
-
+        public QuestData[] QuestDatas;
+        public TextData TextData;
         #endregion
     }
 }

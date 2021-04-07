@@ -13,6 +13,7 @@ namespace CameraSpace
 
         private CameraData _cameraData;
         private PlayerView _playerView;
+        private CameraView _cameraView;
 
         #endregion
 
@@ -33,10 +34,15 @@ namespace CameraSpace
             var cameraModel = new CameraModel(_cameraData.CameraStruct);
             var cameraUI = GameObject.FindGameObjectWithTag("UI");
 
-            var cameraView = Object.Instantiate(_cameraData.Camera, Vector3.zero, Quaternion.identity).GetOrAddComponent<CameraView>();
+            _cameraView = Object.Instantiate(_cameraData.Camera, Vector3.zero, Quaternion.identity).GetOrAddComponent<CameraView>();
 
-            var controller = new CameraController(cameraModel, cameraView, _playerView, cameraProvider);
+            var controller = new CameraController(cameraModel, _cameraView, _playerView, cameraProvider);
             return controller;
+        }
+
+        public CameraView GetCameraView()
+        {
+            return _cameraView;
         }
 
         #endregion

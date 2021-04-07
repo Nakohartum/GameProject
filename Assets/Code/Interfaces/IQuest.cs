@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using Quests;
+using UnityEngine;
 
 
 namespace Interfaces
 {
     public interface IQuest
     {
-        GameObject QuestObject { get; set; }
+        int QuestID { get; }
+        int QuestObjectID { get; }
+        string[] QuestText { get; }
+        QuestStatus QuestStatus { get; set; }
     }
 }

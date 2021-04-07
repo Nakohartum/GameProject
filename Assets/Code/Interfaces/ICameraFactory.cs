@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using CameraSpace;
+using UnityEngine;
 
 
 namespace Interfaces
@@ -6,5 +7,6 @@ namespace Interfaces
     public interface ICameraFactory : IController
     {
         CameraController CreateCamera(ICameraProvider cameraProvider);
+        CameraView GetCameraView();
     }
 }

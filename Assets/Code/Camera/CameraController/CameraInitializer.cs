@@ -9,6 +9,7 @@ namespace CameraSpace
 
         private ICameraFactory _cameraFactory;
         private IController _controller;
+        private CameraView _cameraView;
 
         #endregion
 
@@ -18,6 +19,7 @@ namespace CameraSpace
         {
             _cameraFactory = cameraFactory;
             _controller = _cameraFactory.CreateCamera(cameraProvider);
+            _cameraView = _cameraFactory.GetCameraView();
         }
 
         #endregion
@@ -27,6 +29,11 @@ namespace CameraSpace
         public IController GetController()
         {
             return _controller;
+        }
+
+        public CameraView GetCameraView()
+        {
+            return _cameraView;
         }
 
         #endregion

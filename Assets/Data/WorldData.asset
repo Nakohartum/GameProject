@@ -15,3 +15,6 @@ MonoBehaviour:
   MoralData: {fileID: 11400000, guid: 07080aab6c7bdb34c84db0fb3b05afd2, type: 2}
   CameraData: {fileID: 11400000, guid: a40f4c3bc8a232e45bbe95c212c43899, type: 2}
   PlayerData: {fileID: 11400000, guid: 2c50b28f0bb70a64a9b516208b0a1f6c, type: 2}
+  QuestDatas:
+  - {fileID: 11400000, guid: bbc8fcfc50bf23b48bbde95ad85aa98e, type: 2}
+  TextData: {fileID: 11400000, guid: 02374a5dda0c81344be55bb5ab6e1fe9, type: 2}
