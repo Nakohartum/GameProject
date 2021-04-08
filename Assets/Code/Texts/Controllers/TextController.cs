@@ -25,11 +25,6 @@ namespace Texts
             _isActive = obj;
         }
 
-        private GameObject GetGameObject()
-        {
-            return _textView.gameObject;
-        }
-
         private void DeactivateText()
         {
             _textView.gameObject.SetActive(_isActive);
