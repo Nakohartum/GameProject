@@ -73,6 +73,24 @@
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterCreator\Script\Editor\vCreateBasicCharacterEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterCreator\Script\Editor\vHelperEditor.cs" />
     <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\Editor\vCommentEditor.cs" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\modules\crypt.module\build.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_CZ.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_JP.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\config.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\version.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\modules\network.module\build.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_FR.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\modules\misc.module\build.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\UnicodeData.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_IT.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\build.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_EN.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\resource\modules\image.module\build.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_KR.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_ES.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\native\maxon_login\version.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_DE.txt" />
+    <None Include="Assets\Cineware by Maxon\Plugins\Editor\res\MAXON_EULA_2019_29112019_RU.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityVersions/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -300,6 +318,9 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/UnityGames/New AHPC Game/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="C4D2UnityEditor">
+      <HintPath>D:/UnityGames/New AHPC Game/Assets/Cineware by Maxon/Plugins/Editor/C4D2UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:/UnityVersions/2019.4.17f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
