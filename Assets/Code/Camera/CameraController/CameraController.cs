@@ -48,8 +48,8 @@ public class CameraController : IExecutable, ICleanable, IInitializable
         RaycastHit hit;
         Ray ray = new Ray(cameraView.transform.position, playerView.transform.position - cameraView.transform.position);
         Physics.Raycast(ray, out hit, (cameraView.transform.position - playerView.transform.position).magnitude);
-        _camera.transform.position = new Vector3(this.playerView.transform.position.x + cameraModel.CameraStruct.Offset.x, this.playerView.transform.position.y + cameraModel.CameraStruct.Offset.y, cameraModel.CameraStruct.Offset.z);
-        
+        _camera.transform.position = this.playerView.transform.position + cameraModel.CameraStruct.Offset;
+        _camera.transform.LookAt(this.playerView.transform);
         
     }
 

@@ -27,7 +27,7 @@ namespace Texts
             _textView = textObject.GetOrAddComponent<TextView>();
             var canvas = textObject.GetComponent<Canvas>();
             canvas.worldCamera = _cameraView.GetComponent<Camera>();
-            canvas.planeDistance = 1;
+            canvas.planeDistance = 5;
             var controller = new TextController(textModel, _textView, questAndTextProvider);
             return controller;
         }

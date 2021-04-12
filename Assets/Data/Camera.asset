@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Camera
   m_EditorClassIdentifier: 
   CameraStruct:
-    Offset: {x: 0, y: 1.5, z: -24}
+    Offset: {x: 0, y: 2, z: -8}
   Camera: {fileID: 4088626238393679816, guid: 4ddf828d42ab24f40b541cb53f637aa6, type: 3}
