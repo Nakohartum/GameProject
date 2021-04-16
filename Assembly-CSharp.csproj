@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_17;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_17;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -64,41 +64,158 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Controller\Controllers.cs" />
-    <Compile Include="Assets\Code\Controller\GameInitializer.cs" />
-    <Compile Include="Assets\Code\Controller\HorizontalInputProvider.cs" />
-    <Compile Include="Assets\Code\Controller\InputController.cs" />
-    <Compile Include="Assets\Code\Controller\InputControllerInitializer.cs" />
-    <Compile Include="Assets\Code\Controller\JumpController.cs" />
-    <Compile Include="Assets\Code\Controller\PlayerController.cs" />
-    <Compile Include="Assets\Code\Controller\PlayerInitializer.cs" />
-    <Compile Include="Assets\Code\Controller\PlayerView.cs" />
-    <Compile Include="Assets\Code\Controller\VerticalInputProvider.cs" />
-    <Compile Include="Assets\Code\Extensions.cs" />
-    <Compile Include="Assets\Code\Hunger\HungerData.cs" />
-    <Compile Include="Assets\Code\Hunger\HungerModel.cs" />
-    <Compile Include="Assets\Code\Hunger\HungerStruct.cs" />
-    <Compile Include="Assets\Code\Interface\ICleanable.cs" />
-    <Compile Include="Assets\Code\Interface\IController.cs" />
-    <Compile Include="Assets\Code\Interface\IExecutable.cs" />
-    <Compile Include="Assets\Code\Interface\IInitializable.cs" />
-    <Compile Include="Assets\Code\Interface\IInputProvider.cs" />
-    <Compile Include="Assets\Code\Interface\ILateExecutable.cs" />
-    <Compile Include="Assets\Code\Interface\IPlayerFactory.cs" />
+    <Compile Include="Assets\Code\Builder\GameObjectBuilder.cs" />
+    <Compile Include="Assets\Code\Camera\CameraController\CameraController.cs" />
+    <Compile Include="Assets\Code\Camera\CameraController\CameraInitializer.cs" />
+    <Compile Include="Assets\Code\Camera\CameraFactory\CameraFactory.cs" />
+    <Compile Include="Assets\Code\Camera\CameraModel\CameraModel.cs" />
+    <Compile Include="Assets\Code\Camera\CameraModel\CameraStruct.cs" />
+    <Compile Include="Assets\Code\Camera\CameraModel\CameraView.cs" />
+    <Compile Include="Assets\Code\Controllers.cs" />
+    <Compile Include="Assets\Code\Extensions\Extensions.cs" />
+    <Compile Include="Assets\Code\GameInitializer.cs" />
+    <Compile Include="Assets\Code\InputControllers\HorizontalInputController.cs" />
+    <Compile Include="Assets\Code\InputControllers\InputController.cs" />
+    <Compile Include="Assets\Code\InputControllers\InputControllerInitializer.cs" />
+    <Compile Include="Assets\Code\InputControllers\VerticalInputController.cs" />
+    <Compile Include="Assets\Code\Interfaces\ICameraFactory.cs" />
+    <Compile Include="Assets\Code\Interfaces\ICameraProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\ICleanable.cs" />
+    <Compile Include="Assets\Code\Interfaces\IController.cs" />
+    <Compile Include="Assets\Code\Interfaces\IExecutable.cs" />
+    <Compile Include="Assets\Code\Interfaces\IInitializable.cs" />
+    <Compile Include="Assets\Code\Interfaces\IInputProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\IMoral.cs" />
+    <Compile Include="Assets\Code\Interfaces\IMoralFactory.cs" />
+    <Compile Include="Assets\Code\Interfaces\IMoralProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\IPlayer.cs" />
+    <Compile Include="Assets\Code\Interfaces\IPlayerFactory.cs" />
+    <Compile Include="Assets\Code\Interfaces\IPlayerProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\IQuest.cs" />
+    <Compile Include="Assets\Code\Interfaces\IQuestAndTextProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\IQuestFactory.cs" />
+    <Compile Include="Assets\Code\Interfaces\IQuestProvider.cs" />
+    <Compile Include="Assets\Code\Interfaces\IText.cs" />
+    <Compile Include="Assets\Code\Interfaces\ITextFactory.cs" />
+    <Compile Include="Assets\Code\Interfaces\ITimer.cs" />
     <Compile Include="Assets\Code\MainController.cs" />
-    <Compile Include="Assets\Code\Manager\AxisManager.cs" />
-    <Compile Include="Assets\Code\Moral\MoralController.cs" />
-    <Compile Include="Assets\Code\Moral\MoralData.cs" />
-    <Compile Include="Assets\Code\Moral\MoralInitializer.cs" />
-    <Compile Include="Assets\Code\Moral\MoralModel.cs" />
-    <Compile Include="Assets\Code\Moral\MoralProvider.cs" />
-    <Compile Include="Assets\Code\Moral\MoralStruct.cs" />
-    <Compile Include="Assets\Code\Moral\MoralView.cs" />
-    <Compile Include="Assets\Code\Player\PlayerData.cs" />
-    <Compile Include="Assets\Code\Player\PlayerFactory.cs" />
-    <Compile Include="Assets\Code\Player\PlayerModel.cs" />
-    <Compile Include="Assets\Code\Player\PlayerStruct.cs" />
+    <Compile Include="Assets\Code\Managers\AxisManager.cs" />
+    <Compile Include="Assets\Code\Managers\PathManager.cs" />
+    <Compile Include="Assets\Code\Managers\RoomManager.cs" />
+    <Compile Include="Assets\Code\Moral\Controller\MoralController.cs" />
+    <Compile Include="Assets\Code\Moral\Controller\MoralInitializer.cs" />
+    <Compile Include="Assets\Code\Moral\Factory\MoralFactory.cs" />
+    <Compile Include="Assets\Code\Moral\MoralModel\MoralModel.cs" />
+    <Compile Include="Assets\Code\Moral\MoralModel\MoralStatus.cs" />
+    <Compile Include="Assets\Code\Moral\MoralModel\MoralStruct.cs" />
+    <Compile Include="Assets\Code\Moral\MoralModel\MoralView.cs" />
+    <Compile Include="Assets\Code\Player\Controller\PlayerController.cs" />
+    <Compile Include="Assets\Code\Player\Controller\PlayerInitializer.cs" />
+    <Compile Include="Assets\Code\Player\Factory\PlayerFactory.cs" />
+    <Compile Include="Assets\Code\Player\Model\PlayerModel.cs" />
+    <Compile Include="Assets\Code\Player\Model\PlayerStruct.cs" />
+    <Compile Include="Assets\Code\Player\Model\PlayerView.cs" />
+    <Compile Include="Assets\Code\Providers\CameraProvider.cs" />
+    <Compile Include="Assets\Code\Providers\MoralProvider.cs" />
+    <Compile Include="Assets\Code\Providers\QuestAndTextProvider.cs" />
+    <Compile Include="Assets\Code\Providers\RoomProvider.cs" />
+    <Compile Include="Assets\Code\Quests\Controller\QuestController.cs" />
+    <Compile Include="Assets\Code\Quests\Controller\QuestInitializer.cs" />
+    <Compile Include="Assets\Code\Quests\Factory\QuestFactory.cs" />
+    <Compile Include="Assets\Code\Quests\Model\QuestInfo.cs" />
+    <Compile Include="Assets\Code\Quests\Model\QuestModel.cs" />
+    <Compile Include="Assets\Code\Quests\Model\QuestStatus.cs" />
+    <Compile Include="Assets\Code\Quests\Model\QuestView.cs" />
+    <Compile Include="Assets\Code\SceneWorker\RoomController.cs" />
+    <Compile Include="Assets\Code\SceneWorker\RoomInitializer.cs" />
+    <Compile Include="Assets\Code\SceneWorker\SceneInitializer.cs" />
+    <Compile Include="Assets\Code\SceneWorker\SceneManager.cs" />
+    <Compile Include="Assets\Code\SceneWorker\SceneWorkerInitializer.cs" />
+    <Compile Include="Assets\Code\Texts\Controllers\TextController.cs" />
+    <Compile Include="Assets\Code\Texts\Controllers\TextInitializer.cs" />
+    <Compile Include="Assets\Code\Texts\Model\TextInfo.cs" />
+    <Compile Include="Assets\Code\Texts\Model\TextModel.cs" />
+    <Compile Include="Assets\Code\Texts\Model\TextView.cs" />
+    <Compile Include="Assets\Code\Texts\TextFactory\TextFactory.cs" />
+    <Compile Include="Assets\Code\Timers\AsyncOperationBehaviour.cs" />
+    <Compile Include="Assets\Code\Timers\CouroutineState.cs" />
+    <Compile Include="Assets\Code\Timers\Timer.cs" />
+    <Compile Include="Assets\Code\Timers\TimerController.cs" />
+    <Compile Include="Assets\Code\Timers\TimerExtensions.cs" />
+    <Compile Include="Assets\Code\WorldData\CameraData.cs" />
     <Compile Include="Assets\Code\WorldData\Data.cs" />
+    <Compile Include="Assets\Code\WorldData\MoralData.cs" />
+    <Compile Include="Assets\Code\WorldData\PlayerData.cs" />
+    <Compile Include="Assets\Code\WorldData\QuestData.cs" />
+    <Compile Include="Assets\Code\WorldData\TextData.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Camera\vThirdPersonCamera.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonController.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonInput.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonMotor.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vComment.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vExtensions.cs" />
+    <Compile Include="Assets\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Invector-3rdPersonController_LITE\README_Basic.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/UnityVersions/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -281,6 +398,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:/UnityVersions/2019.4.17f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:/UnityGames/New AHPC Game/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/UnityGames/New AHPC Game/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -657,8 +777,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -667,7 +793,12 @@
       <HintPath>D:/UnityGames/New AHPC Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{57319113-7BB7-FE96-4C24-FB4F8128300C}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,17 +1,18 @@
-﻿using Moral;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Player
+
+namespace WorldData
 {
-    [CreateAssetMenu(fileName = "Data", menuName = "GameData/Data", order = 1 )]
-    class Data : ScriptableObject
+    [CreateAssetMenu(fileName = "WorldData", menuName = "GameData/WorldData", order = 0)]
+    public class Data : ScriptableObject
     {
-        public PlayerData PlayerData;
+        #region Fields
+
         public MoralData MoralData;
+        public CameraData CameraData;
+        public PlayerData PlayerData;
+        public QuestData[] QuestDatas;
+        public TextData TextData;
+        #endregion
     }
 }
